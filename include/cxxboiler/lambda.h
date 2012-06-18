@@ -1,6 +1,6 @@
 #pragma once
 
-namespace cppboiler {
+namespace cxxboiler {
 namespace lambda {
 
 template <typename T>
@@ -19,4 +19,4 @@ struct delete_array : public std::unary_function <T*, bool> {
 	}
 };
 
-} } // namespace cppboiler::lambda
+} } // namespace cxxboiler::lambda

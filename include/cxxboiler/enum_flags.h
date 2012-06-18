@@ -1,6 +1,6 @@
 #pragma once
 
-namespace cppboiler {
+namespace cxxboiler {
 
 //
 // Based on Qt's QFlags.
@@ -44,4 +44,4 @@ private:
 	int i;
 };
 
-} // namespace cppboiler
+} // namespace cxxboiler

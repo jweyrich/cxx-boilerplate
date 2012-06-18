@@ -2,7 +2,7 @@
 
 #include <functional>
 
-namespace cppboiler {
+namespace cxxboiler {
 namespace functional {
 
 template<typename T, typename M, template<typename> class C = std::less>
@@ -49,6 +49,6 @@ method_comparer<T, M, C> make_method_comparer_ex(M (T::*p)() const) {
 	return method_comparer<T, M, C>(p);
 }
 
-} } // namespace cppboiler::functional
+} } // namespace cxxboiler::functional
 
 

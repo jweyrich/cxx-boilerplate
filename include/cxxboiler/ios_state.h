@@ -2,7 +2,7 @@
 
 #include <ios>
 
-namespace cppboiler {
+namespace cxxboiler {
 namespace io {
 
 //
@@ -40,4 +40,4 @@ private:
 	ios_state_saver& operator=(const ios_state_saver&);
 };
 
-} } // namespace cppboiler::io
+} } // namespace cxxboiler::io

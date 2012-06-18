@@ -2,7 +2,7 @@
 
 #include <cstddef>
 
-namespace cppboiler {
+namespace cxxboiler {
 namespace array {
 
 template <typename T, std::size_t N>
@@ -21,4 +21,4 @@ T* end(T (&array)[N]) {
     return &array[N];
 }
 
-} } // namespace cppboiler::array
+} } // namespace cxxboiler::array

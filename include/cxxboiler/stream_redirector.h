@@ -3,7 +3,7 @@
 #include <fstream>
 #include <iostream>
 
-namespace cppboiler {
+namespace cxxboiler {
 namespace io {
 
 class stream_redirector {
@@ -23,4 +23,4 @@ private:
 	stream_redirector& operator=(const stream_redirector&);
 };
 
-} } // namespace cppboiler::io
+} } // namespace cxxboiler::io

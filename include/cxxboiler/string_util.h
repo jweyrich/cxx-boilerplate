@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace cppboiler {
+namespace cxxboiler {
 namespace string {
 
 std::string replace(const std::string& str, const std::string& from, const std::string& to) {
@@ -54,4 +54,4 @@ std::string copy_range_inclusive(const std::string& data, const std::string& beg
 	);
 }
 
-} } // namespace cppboiler::string
+} } // namespace cxxboiler::string
