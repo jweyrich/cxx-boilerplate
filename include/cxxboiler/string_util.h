@@ -5,6 +5,49 @@
 namespace cxxboiler {
 namespace string {
 
+inline bool contains(const std::string& s1, const std::string& s2) {
+    return s1.find(s2) != std::string::npos;
+}
+
+// Remove leading whitespaces
+inline std::string& ltrim(std::string& s) {
+    s.erase(s.begin(), std::find_if(s.begin(), s.end(),
+        std::not1(std::ptr_fun<int, int>(std::isspace))));
+    return s;
+}
+
+// Remove trailing whitespaces
+inline std::string& rtrim(std::string& s) {
+    s.erase(std::find_if(s.rbegin(), s.rend(),
+        std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
+    return s;
+}
+
+// Remove whitespaces from both ends
+inline std::string& trim(std::string& s) {
+    return ltrim(rtrim(s));
+}
+
+// Check if a string begins with another string
+inline bool begins_with(const std::string& s, const std::string& start) {
+    return s.compare(0, start.length(), start) == 0;
+}
+
+// Check if a string ends with another string
+inline bool ends_with(const std::string& s, const std::string& ending) {
+    return ending.length() <= s.length() && s.substr(s.length() - ending.length()) == ending;
+}
+
+template <typename T>
+std::string get_bits(T value) {
+    int size = sizeof(value) * CHAR_BIT;
+    std::string ret;
+    ret.reserve(size);
+    for (int i = size-1; i >= 0; --i)
+        ret += (value & (1 << i)) == 0 ? '0' : '1';
+    return ret;
+}
+
 std::string replace(const std::string& str, const std::string& from, const std::string& to) {
 	size_t start_pos = str.find(from);
 	if (start_pos == std::string::npos)
